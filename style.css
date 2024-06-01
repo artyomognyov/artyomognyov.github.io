@@ -484,6 +484,8 @@ a.contact-info-container:hover {
 
 .contact-icon {
   /* cursor: default; */
+  background: none;
+  box-shadow: none;
 }
 
 /* .email-icon {
