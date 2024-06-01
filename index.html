@@ -1,119 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Artöm Ognöv</title>
-  <meta name="description" content="personal site">
-  <meta name="author" content="Artöm Ognöv">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head>
-<body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <img class="avatar" src="images/avatar.jpg" width="64px" style="margin-top: 10%">
-      <h1>Artöm Ognöv</h1>
-      <!-- <h5>personal page</h5> -->
-      <div class="one-half column"></div>
-        <a href="mailto:artyom.ognyov@gmail.com"><img src="images/icons/mail.png" height="32px" style="margin-right: 2%;"></a>
-        <a href="https://t.me/artyomognyov"><img src="images/icons/telegram.png" height="32px" style="margin-right: 2%;"></a>
-        <a href="https://www.behance.net/artyomognyov"><img src="images/icons/behance.png" height="32px" style="margin-right: 2%;"></a>
-        <a href="http://youtube.com/channel/UCqDuFODwMZjMfNaMQkDaqhQ"><img src="images/icons/youtube.png" height="32px" style="margin-right: 2%;"></a>
-        <a href="https://vimeo.com/artyomognyov"><img src="images/icons/vimeo.png" height="32px" style="margin-right: 2%;"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artöm Ognöv</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION DESKTOP -->
+    <nav id="desktop-nav">
+      <div class="logo">Artöm Ognöv</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#comics">Comics</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#animation">Animation</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </div>
-  </div>
+    </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 5%">
-        <h4>About</h4>
-        <p>My name is Artöm Ognöv, I'm comic book artist, illustrator and game developer. This site is something like my portfolio.</p>
+    <!-- NAVIGATION MOBILE -->
+    <nav id="hamburger-nav">
+      <div class="logo">Artöm Ognöv</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#comics" onclick="toggleMenu()">Comics</a></li>
+          <li><a href="#games" onclick="toggleMenu()">Games</a></li>
+          <li><a href="#animation" onclick="toggleMenu()">Animation</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
       </div>
-      <div class="one-half column" style="margin-top: 5%">
-        <h4>Availability</h4>
-        <p>I'm open for paid collaborations and freelance projects. Anyway you can contact me via e-mail or Telegram. Let's make some great stuff!</p>
+    </nav>
+
+    <!-- PROFILE SECTION -->
+    <section id="profile">
+      <!-- <div class="section__pic-container">
+        <img src="./images/avatar.jpg" alt="John Doe profile picture" class="avatar"/>
+      </div> -->
+      <div class="section__text">
+        <p class="section__text__title">Hi, I'm</p>
+        <h1 class="main-title">Artöm</h1>
+        
+        <p class="typewrite" data-period="2000" data-type='[ "QA Engineer", "Game Developer", "Comic Artist", "Illustrator", "2D Animator" ]'></a>
+
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="location.href='https://career.habr.com/artyomognyov'")"
+          >
+            Habr Career
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class=container”>
-    <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 10%">
-      <div class="one-half column" style="margin-top: 5%">
-        <h4>Sequential art</h4>
-        <p>When I was 6 I was bitten by a radioactive comic book artist. Since then I can't stop drawing. I think comics are the most expressive medium in human history.</p>
-        <a class="button button-primary" href="/sequential_art.html">Show more sequential art</a>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="section-title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./images/about_photo.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./images/icons/work.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>5+ years <br />QA Engineer</p>
+            </div>
+            <div class="details-container">
+                <img
+                src="./images/icons/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>RSREU<br/>CG Artist and Animator</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+                My name is Artöm Ognöv, I'm comic book artist, illustrator and game developer. This site is something like my portfolio.<br/><br/>
+                I'm open for paid collaborations and freelance projects. Anyway you can contact me via e-mail or Telegram. Let's make some great stuff!
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="one-half column" style="margin-top: 5%">
-        <img class="preview-image" src="images/sequential_art/sequential_art_preview.png" width="75%">
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <!-- <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="section-title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section> -->
 
-    <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 10%">
-      <div class="one-half column" style="margin-top: 5%">
-        <h4>Illustrations</h4>
-        <p>A large number of hours spent in the university painting and drawing workshop led me to my own illustrations. But now I work mostly digitally.</p>
-        <a class="button button-primary" href="/illustrations.html">Show more illustrations</a>
+    <!-- COMICS SECTION -->
+    <section id="comics" class="comics">
+      <!-- <p class="section__text__p1">Browse My Recent</p> -->
+      <h1 class="section-title">Comics</h1>
+      <p class="section__text__p1">When I was 6 I was bitten by a radioactive comic book artist. Since then I can't stop drawing. I think comics are the most expressive medium in human history.</p>
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <div class="details-container">
+            <div class="article-container">
+              <img
+                src="./images/comics/lighthouse/page 1.png"
+                alt="lighthouse"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Lighthouse</h2>
+            <p class="section__text__p2">A short comic strip based on the last unfinished story by Allan Edgar Poe. I love such dark and deep stories.</p>
+
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2"
+                onclick="location.href='./images/comics/lighthouse/The_Lighthouse_by_Aryom_Ognyov.cbz'"
+              >
+                CBZ
+              </button>
+              <button
+                class="btn btn-color-2"
+                onclick="location.href='./images/comics/lighthouse/The_Lighthouse_by_Aryom_Ognyov.pdf'"
+              >
+                PDF
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <div class="article-container">
+              <img
+                src="./images/comics/girl_with_goat_eyes/Page 1.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Girl With Goat Eyes</h2>
+            <p class="section__text__p2">This is my night dream captured in the comic. Don't give too much importance.</p>
+
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2"
+                onclick="location.href='./images/comics/girl_with_goat_eyes/Girl_with_Goat_eyes_by_Artyom_Ognyov.cbz'"
+              >
+                CBZ
+              </button>
+              <button
+                class="btn btn-color-2"
+                onclick="location.href='./images/comics/girl_with_goat_eyes/Girl_with_Goat_eyes_by_Artyom_Ognyov.pdf'"
+              >
+                PDF
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <div class="article-container">
+              <img
+                src="./images/comics/klubnikin/klubnikin_01.png"
+                alt="lighthouse"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Клубникин</h2>
+            <p class="section__text__p2">Some dark story from your childhood. The script is written by stand-up comedian Alexey Platon.<br/><br/>(Work in progress)</p>
+
+          </div>
+
+        </div>
       </div>
-      <div class="one-half column" style="margin-top: 5%">
-        <img class="preview-image" src="images/illustrations/illustrations_preview.png" width="100%">
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <div class="details-container">
+            <div class="article-container">
+              <img
+                src="./images/comics/perduck/perduck_preview.png"
+                alt="perduck"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">PerDuck</h2>
+            <p class="section__text__p2">A series of comic strips about a spontaneously combustible duck. The script is written by stand-up comedian Alexey Platon.</p>
+
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2"
+                onclick="location.href='./images/comics/perduck/Perduck_1_by_Artyom_Ognyov_and_Alexey_Platon.cbz'"
+              >
+                CBZ (Part 1)
+              </button>
+              <button
+                class="btn btn-color-2"
+                onclick="location.href='./images/comics/perduck/Perduck_2_by_Artyom_Ognyov_and_Alexey_Platon.cbz'"
+              >
+                CBZ (Part 2)
+              </button>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </section>
 
-  <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 10%">
-    <div class="one-half column" style="margin-top: 5%">
-      <h4>Game development</h4>
-      <p>I love making games. You probably won't like them, because I make them primarily for myself. But this is of course up to you.</p>
-      <a class="button button-primary" href="/gamedev.html">Show more gamedev projects</a>
-    </div>
-    <div class="one-half column" style="margin-top: 5%">
-      <img class="preview-image" src="images/gamedev/gamedev_preview.png" width="100%">
-    </div>
-  </div>
+    <!-- GAMES SECTION -->
+    <section id="games" class="games">
+        <h1 class="section-title">Games</h1>
+        <p class="section__text__p1">I love making games. You probably won't like them, because I make them primarily for myself. But this is of course up to you.</p>
 
-  <div class="row" style="margin-left: 10%; margin-right: 10%; margin-top: 10%">
-    <div class="one-half column" style="margin-top: 5%">
-      <h4>Animation</h4>
-      <p>I like animation. And I like making animated movies. But it can be too hard sometimes.</p>
-      <a class="button button-primary" href="/animation.html">Show more animation projects</a>
-    </div>
-    <div class="one-half column" style="margin-top: 5%">
-      <img class="preview-image" src="images/animation/animation_preview.png" width="100%">
-    </div>
-  </div>
+        <div class="experience-details-container">
+            <div class="about-containers">
 
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+              <div class="details-container">
+                  <div class="article-container">
+                    <img
+                      src="./images/games/erar_banner_1.png"
+                      alt="erarchtoor"
+                      class="project-img"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title">Ерархтур</h2>
+                    <p class="section__text__p2">Тебе удалось всё-таки пробраться в ДК Ерархтура ночью чтобы изучить тайны которые скрывает его подвал. А может быть и Мамэ...<br/><br/>(Work in progress)</p>
 
-  <center>
-    <h6>stay tuned.</h6>
-  </center>
-  <br/>
+                  <div class="btn-container">
+                    <button
+                      class="btn btn-color-2"
+                      onclick="location.href='./games/erarchtoor/erar.html'"
+                    >
+                      Play Online (Desktop only)
+                    </button>
+                    <button
+                      class="btn btn-color-2"
+                      onclick="location.href='https://github.com/artyomognyov/erarchtoor'"
+                    >
+                      Github (Sourcecode)
+                    </button>
+                  </div>
+                </div>
 
-</body>
+            </div>
+          </div>
+
+
+        <div class="experience-details-container">
+          <div class="about-containers">
+
+            <div class="details-container">
+              <div class="article-container">
+                <img
+                  src="./images/games/increment_1.png"
+                  alt="increment"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Increment</h2>
+              <p class="section__text__p2">A story about the fragility of human memories and about things that are better forgotten forever. The game is under heavy development. Beta is coming.</p>
+
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2"
+                  onclick="location.href='https://gitlab.com/artyom.ognyov/increment'"
+                >
+                  GitLab (Sourcecode)
+                </button>
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="article-container">
+                <img
+                  src="./images/games/temple_1.png"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Temple</h2>
+              <p class="section__text__p2">You are lost in the temple. Leaving the temple is finding yourself.</p>
+
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2"
+                  onclick="location.href='https://anar.itch.io/temple'"
+                >
+                  ITCH.IO (Windows)
+                </button>
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="article-container">
+                <img
+                  src="./images/games/cashew_1.jpg"
+                  alt="Project 3"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Cashew</h2>
+              <p class="section__text__p2">An old-school text-based roguelike with a dark story and puzzles. The project is frozen.</p>
+
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2"
+                  onclick="location.href='https://gitlab.com/artyom.ognyov/cashew'"
+                >
+                  GitLab (Sourcecode)
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    <!-- ANIMATION SECTION -->
+    <section id="animation" class="animation">
+        <h1 class="section-title">Animation</h1>
+        <p class="section__text__p1">I like animation. And I like making animated movies. But it can be too hard sometimes.</p>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <div class="article-container">
+                <iframe class="project-img" title="vimeo-player" src="https://player.vimeo.com/video/566380696?h=3011b3e9e9" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+              </div>
+              <h2 class="experience-sub-title project-title">Wish You Were Here (Animatiic)</h2>
+              <p class="section__text__p2">My graduation project based on the song by Pink Floyd "Wish You Were Here". The main subject of the work is "Visual solution for animated film".</p>
+
+            </div>
+            <div class="details-container">
+              <div class="article-container">
+                <iframe class="project-img" title="vimeo-player" src="https://player.vimeo.com/video/342187336?h=a6c587b68f" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+              </div>
+              <h2 class="experience-sub-title project-title">The Sheep Man's Christmas</h2>
+              <p class="section__text__p2">Study work within the course on 2D animation based on the story "The Sheep Man's Christmas" by Japanese writer Haruki Murakami.</p>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contact">
+      <p class="section__text__p1">Stay tuned</p>
+      <h1 class="section-title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <a class="contact-info-container" href="mailto:artyom.ognyov@icloud.com">
+          <img
+            src="./images/icons/mail.png"
+            alt="email icon"
+            class="icon contact-icon"
+          />
+        </a>
+
+        <a class="contact-info-container" href="https://t.me/artyomognyov">
+            <img
+              src="./images/icons/telegram.png"
+              alt="telegram icon"
+              class="icon contact-icon"
+            />
+          </a>
+
+          <a class="contact-info-container" href="http://linkedin.com/in/artöm-ognöv-0980051b0">
+            <img
+              src="./images/icons/linkedin.png"
+              alt="linkedin icon"
+              class="icon contact-icon"
+            />
+          </a>
+
+          <!-- <a class="contact-info-container" href="https://www.behance.net/artyomognyov">
+            <img
+              src="./images/icons/behance.png"
+              alt="behance icon"
+              class="icon contact-icon"
+            />
+          </a> -->
+
+          <a class="contact-info-container" href="https://www.youtube.com/channel/UCqDuFODwMZjMfNaMQkDaqhQ">
+            <img
+              src="./images/icons/youtube.png"
+              alt="youtube icon"
+              class="icon contact-icon"
+            />
+          </a>
+
+          <a class="contact-info-container" href="https://vimeo.com/artyomognyov">
+            <img
+              src="./images/icons/vimeo.png"
+              alt="vimeo icon"
+              class="icon contact-icon"
+            />
+          </a>
+
+      </div>
+    </section>
+    <footer>
+      <p>Copyright &#169; Artöm Ognöv. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
