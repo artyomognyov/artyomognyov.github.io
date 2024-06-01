@@ -132,7 +132,7 @@ a:hover {
 .menu-links {
   position: absolute;
   top: 150%;
-  right: -200%;
+  right: 0%;
   background-color: #282828;
   box-shadow: 0.5rem 0.5rem #1d2021;
   width: fit-content;
